@@ -1,0 +1,23 @@
+{
+  "dimensions":
+  [
+    {
+      "width": 300,
+      "height": 250,
+      "suffix": ""
+    },
+    {
+      "width": 200,
+      "height": 500,
+      "suffix": ""
+    }
+  ],
+  "versions":
+  [
+    "version1",
+    "version2"
+  ],
+  "DoubleClick" : true,
+  "Static" : false,
+  "Master" : true
+}

@@ -1,0 +1,69 @@
+/* ==============================================================================================
+  TOOLS
+  Globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+================================================================================================= */
+
+// Convert px to rem. This allows us to either include the px unit or not in the function call.
+@function calculate-rem($pixels, $context: $default-font-size) {
+
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+
+// Shorthand css mixin for offset positioning elements on the page
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+
+// Shorthand mixin for absolute positioning, e.g. @include absolute($top: 10px, $left:20px);
+@mixin absolute($args...) {
+  @include position(absolute, $args...);
+}
+
+
+// Background image mixin
+@mixin background($size: cover, $repeat: no-repeat, $color: $white-transparent, $position: 0 0) {
+  background: {
+    size: $size !important;
+    repeat: $repeat !important;
+    color: $color;
+    position: $position !important;
+  }
+}
+
+
+// Choose between centering an element hoziontally, vertically, or both (Parent must be relative).
+@mixin align-center($horizontal: true, $vertical: true) {
+
+  @if ($horizontal and $vertical) {
+
+    @include absolute($top: 50%, $left: 50%);
+
+    transform: translate(-50%, -50%);
+
+  } @else if ($horizontal) {
+
+    @include absolute($left: 50%);
+
+    transform: translate(-50%, 0);
+
+  }@else if ($vertical) {
+
+    @include absolute($top: 50%);
+
+    transform: translate(0, -50%);
+  }
+}

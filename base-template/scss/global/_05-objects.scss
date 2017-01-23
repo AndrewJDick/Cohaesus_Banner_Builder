@@ -1,0 +1,27 @@
+/* ========================================================================================================
+  OBJECTS
+  Class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+=========================================================================================================== */
+
+.banner {
+  position: relative;
+}
+
+.slide {
+  &-container {
+    @extend %top-left;
+  }
+
+  &-item {
+    @extend %top-left;
+    @include background;
+
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.frame2,
+.frame3 {
+  opacity: 0;
+}

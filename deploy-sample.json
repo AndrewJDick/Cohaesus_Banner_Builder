@@ -1,0 +1,8 @@
+{
+  "staging": {
+    "host": "placeholder-host",
+    "user": "placeholder-username",
+    "pass": "placeholder-password",
+    "project": "placeholder-project"
+  }
+}

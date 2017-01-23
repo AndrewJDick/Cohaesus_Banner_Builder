@@ -1,0 +1,33 @@
+@import '_global-scss/global';
+
+
+.banner {
+  @include background;
+
+  height: calculate-rem({{height}});
+  width: calculate-rem({{width}});
+}
+
+.banner-border {
+  @extend %top-left;
+
+  border: calculate-rem(1px) solid $black;
+  height: calculate-rem({{height}} - 2);
+  width: calculate-rem({{width}} - 2);
+  z-index: 9998;
+}
+
+.full-dimension {
+  height: calculate-rem({{height}});
+  width: calculate-rem({{width}});
+}
+
+.slide-container {
+  height: calculate-rem({{height}});
+  width: calculate-rem({{width}});
+}
+
+
+/* =============================================================================================
+  ADD BANNER-SPECIFIC STYLING BELOW THIS LINE. USE THE _GLOBAL-SCSS DIRECTORY FOR GLOBAL STYLING
+============================================================================================= */

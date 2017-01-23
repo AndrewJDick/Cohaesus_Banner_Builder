@@ -1,0 +1,30 @@
+/* ================================================================================================================================
+  ELEMENTS
+  Styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
+=================================================================================================================================== */
+
+html {
+  font-weight: 100;
+}
+
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+a {
+  text-decoration: none;
+
+  // Address `outline` inconsistency between Chrome and other browsers.
+  &:focus {
+    outline: thin dotted;
+  }
+
+  // Improve readability when focused and also mouse hovered in all browsers.
+  &:active,
+  &:hover {
+    outline: 0;
+  }
+}

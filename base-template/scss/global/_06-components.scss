@@ -1,0 +1,27 @@
+/* ========================================================================================================================================
+  COMPONENTS
+  Specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
+=========================================================================================================================================== */
+
+// Required by DoubleClick
+.bg-exit {
+  @extend %top-left;
+
+  background-color: $white-transparent;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+}
+
+
+// Hides the banner until all required assets have been loaded
+.covering-div {
+  @extend %top-left;
+
+  background-color: $white;
+  height: 100%;
+  transition: opacity $default-transition ease;
+  width: 100%;
+  z-index: 9997;
+}

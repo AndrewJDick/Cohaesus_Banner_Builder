@@ -1,0 +1,57 @@
+{
+  "paths": {
+    "baseTemplate": {
+      "root": "./base-template",
+      "js": {
+        "root": "./base-template/js"
+      },
+      "img": {
+        "root": "./base-template/img",
+        "global": "./base-template/img/global",
+        "master": "./base-template/img/master"
+      },
+      "scss": {
+        "root": "./base-template/scss",
+        "global": "./base-template/scss/global",
+        "master": "./base-template/scss/master"
+      }
+    },
+
+    "html": {
+      "all": "./**/*.html",
+      "src": {
+        "all": "./src/**/*.html",
+        "index": "./src/**/index.html"
+      },
+      "config": "./.htmllintrc"
+    },
+
+    "js": {
+      "all": "./**/*.js",
+      "src": {
+        "all": "./src/**/*.js",
+        "main": "./src/**/main.js",
+        "doubleclick": "./src/**/doubleclick.js",
+        "static": "./src/**/static.js"
+      },
+      "config": "./.jshintrc"
+    },
+
+    "scss": {
+      "all": "./**/*.scss",
+      "src": {
+        "all": "./src/**/*.scss",
+        "global": "./src/_global-scss/*.scss"
+      },
+      "config": "./sass-lint.yml"
+    },
+
+    "img": {
+      "src": {
+        "static": ["src/*/static/*/img/", "src/*/static/*/img/*"],
+        "doubleclick": ["src/*/doubleclick/img/", "src/*/doubleclick/img/*"],
+        "global": "src/_global-images/*"
+      }
+    }
+  }
+}
